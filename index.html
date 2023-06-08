@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./assets/img/logo.jpeg">
+    <title>Kim Thiện - Portfolio</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Suez+One&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+</head>
+<body>
+    <div class="grid wide">
+        <header id="header">
+            <div class="header__logo">
+                <img src="./assets/img/logo-removebg.png" title="logo" class="header-logo__img">
+            </div>
+            <ul class="header__nav">
+                <li class="header-nav__list">
+                    <a href="#" class="header-nav-list__link">
+                        <span class="header-nav-list-link__text">HOME</span>
+                    </a>
+                </li>
+                <li class="header-nav__list">
+                    <a href="#about" class="header-nav-list__link">
+                        <span class="header-nav-list-link__text">ABOUT ME</span>
+                    </a>
+                </li>
+                <li class="header-nav__list">
+                    <a href="#portfolio" class="header-nav-list__link">
+                        <span class="header-nav-list-link__text">PORTFOLIO</span>
+                    </a>
+                </li>
+                <li class="header-nav__list">
+                    <a href="#services" class="header-nav-list__link">
+                        <span class="header-nav-list-link__text">SERVICES</span>
+                    </a>
+                </li>
+                <li class="header-nav__list">
+                    <a href="#experience" class="header-nav-list__link">
+                        <span class="header-nav-list-link__text">EXPERIENCE</span>
+                    </a>
+                </li>
+                <li class="header-nav__list">
+                    <a href="#contact" class="header-nav-list__link">
+                        <span class="header-nav-list-link__text">CONTACT</span>
+                    </a>
+                </li>
+            </ul>
+            <i id="menuIcon" class='header__menuIcon bx bx-menu'></i>
+        </header>
+        <div class="intro">
+            <h2 class="no-select">My journey</h2>
+            <h1 class="no-select">from DESIGNER <br>
+            to FRONT-END <br>
+            & FULL STACK<span class="intro__dot">.</span> </h1>
+            <a href="#portfolio" class="btn intro__btn">
+                <button class="btn__text">PREVIOUS PROJECTS</button>
+            </a>
+        </div>
+
+        <div id="about" class="row">
+            <div class="about__img col l-5 m-6 c-12">
+                <div class="about__imgWrap">
+                    <div class="about-img__border"></div>
+                    <img src="./assets/img/avatar.JPG" title="avatar">
+                </div>
+            </div>
+            <div class="about__content col l-7 m-6 c-12">
+                <h2 class="heading about-content__heading">ABOUT ME</h2>
+                <p class="desc">
+                    Trước đây tôi là một designer và đang trên hành trình chuyển đổi sự nghiệp 
+                    thành một front-end developer và sau đó là web developer (Fullstack). 
+                    Với xuất thân là designer, tôi đủ khả năng tư duy trong lĩnh vực web design và trở thành một front-end developer,
+                    tạo ra giao diện đẹp mắt và phù hợp yêu cầu khách hàng. <br>
+                    Qua quá trình học và trải nghiệm, tôi đang nâng cao kỹ năng lập trình để biến ý tưởng thành hiện thực. 
+                    Tôi hướng đến việc xây dựng trang web chất lượng cao, kết hợp giữa thiết kế và chức năng. 
+                    Tôi tin rằng sự kết hợp này sẽ tạo ra trải nghiệm tuyệt vời cho người dùng. 
+                    Tôi luôn tìm kiếm thách thức mới và không ngừng học hỏi để phát triển kỹ năng và đóng góp vào dự án thú vị.</p>
+                <div class="about-content__btn">
+                    <a href="#contact" class="btn about__btn">
+                        <button class="btn__text">HIRE ME</button>
+                    </a>
+                    <a href="./index.html" class="btn about__btn">
+                        <button class="btn__text">DOWNLOAD CV</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="portfolio">
+            <h2 class="heading">PORTFOLIO</h2>
+            <ul class="portfolio__title row">
+                <li class="portfolio-title__item portfolio-title__item--active col l-3 m-3 c-6">
+                    Project 1
+                </li>
+                <li class="portfolio-title__item col l-3 m-3 c-6">
+                    Project 2
+                </li>
+                <li class="portfolio-title__item col l-3 m-3 c-6">
+                    Project 3
+                </li>
+                <li class="portfolio-title__item col l-3 m-3 c-6">
+                    Project 4
+                </li>
+                <div class="portfolio-title__line"></div>
+            </ul>
+
+            <div id="project1" class="row portfolioWrap portfolioWrap--active">
+                <div class="portfolio__content col l-6 m-6 c-12">
+                    <h2 class="heading portfolio-content__heading">Music Player App Design</h2>
+                    <ul class="portfolio-content__desc desc">
+                        <li>Vị trí: Design</li>
+                        <li>Thành viên: 1</li>
+                        <li>Phần mềm: Figma</li>
+                        <li>Mục đích: Cung cấp giao diện trực quan, kiểm thử các tính năng trước đi chuyển sang Front-End</li>
+                        <li>Công nghệ sử dụng: Component, Autolayout, Design System, Propotype, ...</li>
+                    </ul>
+                    <div class="portfolio-content__readmore">
+                        <i class='bx bxs-chevrons-right' ></i>
+                        <a href="" class="portfolio-content-readmore__link ml-16"> Link Figma</a>
+                    </div>
+                </div>
+                <div class="portfolio__img col l-6 m-6 c-12">
+                    <div class="portfolio-img__border"></div>
+                    <img src="./assets/img/dribble.jpg" title="Music Player App Design">
+                </div>
+            </div>
+
+            <div id="project2" class="row portfolioWrap">
+                <div class="portfolio__content col l-6 m-6 c-12">
+                    <h2 class="portfolio-content__heading heading">Landing Page Design</h2>
+                    <ul class="portfolio-content__desc desc">
+                        <li>Vị trí: Design</li>
+                        <li>Thành viên: 1</li>
+                        <li>Phần mềm: Figma</li>
+                        <li>Mục đích: Tạo template để đưa vào kho thư việc giao diện landing page lĩnh vực BĐS</li>
+                        <li>Công nghệ sử dụng: Component, Autolayout, Design System, Propotype, Slide, Light/ Dark mode...</li>
+                    </ul>
+                    <div class="portfolio-content__readmore">
+                        <i class='bx bxs-chevrons-right' ></i>
+                        <a href="https://www.figma.com/proto/TAcEWAQVSvSnHRsQHeOLRP/Landing-Page-(Growth-Building)?page-id=0%3A1&type=design&node-id=1-2&viewport=682%2C476%2C0.5&scaling=scale-down&starting-point-node-id=1%3A2" class="portfolio-content-readmore__link ml-16"> Link to Figma</a>
+                    </div>
+                </div>
+                <div class="portfolio__img col l-6 m-6 c-12">
+                    <div class="portfolio-img__border"></div>
+                    <img src="./assets/img/Thumbnail-forweb.jpg" title="Landing Page Design">
+                </div>
+            </div>
+
+            <div id="project3" class="row portfolioWrap">
+                <div class="portfolio__content col l-6 m-6 c-12">
+                    <h2 class="heading portfolio-content__heading">Shop Website</h2>
+                    <ul class="portfolio-content__desc desc">
+                        <li>Vị trí: Front-End</li>
+                        <li>Thành viên: 1</li>
+                        <li>Mục đích: Tạo web bán hàng với đầy đủ các chức năng cơ bản hiển thị phía người dùng</li>
+                        <li>Công nghệ sử dụng: HTML, CSS, JS</li>
+                    </ul>
+                    <div class="portfolio-content__readmore">
+                        <i class='bx bxs-chevrons-right' ></i>
+                        <span class="portfolio-content-readmore__link ml-16"> Link Github:</span>
+                    </div>
+                </div>
+                <div class="portfolio__img col l-6 m-6 c-12">
+                    <div class="portfolio-img__border"></div>
+                    <img src="./assets/img/mockup-shop.png" title="Shop Website">
+                </div>
+            </div>
+
+            <div id="project4" class="row portfolioWrap">
+                <div class="portfolio__content col l-6 m-6 c-12">
+                    <h2 class="heading portfolio-content__heading">ToDo List Web</h2>
+                    <ul class="portfolio-content__desc desc">
+                        <li>Vị trí: Front-End</li>
+                        <li>Thành viên: 2</li>
+                        <li>Mục đích: Tạo trình ghi chú công việc trực tuyến, thông báo về điện thoại, 
+                            tương tự app nhắc nhở trên điện thoại</li>
+                        <li>Công nghệ sử dụng: HTML, CSS, React Js, Node Js, MySQL</li>
+                    </ul>
+                    <div class="portfolio-content__readmore">
+                        <i class='bx bxs-chevrons-right' ></i>
+                        <span class="portfolio-content-readmore__link ml-16"> Link Github:</span>
+                    </div>
+                </div>
+                <div class="portfolio__img col l-6 m-6 c-12">
+                    <div class="portfolio-img__border"></div>
+                    <img src="./assets/img/dribble.jpg" title="ToDo List Web">
+                </div>
+            </div>
+        </div>
+
+        <div id="services">
+            <h2 class="heading">SERVICES</h2>
+            <div class="servicesWrap">
+                <div class="row">
+                    <div class="services__item col l-6">
+                        <div class="services__itemWrap">
+                            <div class="services-item__content">
+                                <div class="services-item-content__title">
+                                    <div class="services-item-content-title__icon">
+                                        <i class='bx bx-code-alt' ></i>
+                                    </div>
+                                    <span class="ml-32 services-item-content-title__heading heading">WEB DESIGN & DEVELOPMENT</span>
+                                </div>
+                                <div class="desc services-item-content-title__desc">
+                                    Với khả năng sử dụng các công cụ hàng đầu như HTML, CSS, JavaScript 
+                                    và các phần mềm thiết kế như Photoshop và Illustrator, 
+                                    chúng tôi sẵn sàng thực hiện thiết kế và phát triển trang web chất lượng cao, 
+                                    đáp ứng đầy đủ yêu cầu của khách hàng và mang đến trải nghiệm tuyệt vời cho người dùng.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="services__item services__item--2n col l-6">
+                        <div class="services__itemWrap">
+                            <div class="services-item__content">
+                                <div class="services-item-content__title">
+                                    <div class="services-item-content-title__icon">
+                                        <i class='bx bx-devices'></i>
+                                    </div>
+                                    <span class="ml-32 services-item-content-title__heading heading">UI/UX DESIGN</span>
+                                </div>
+                                <div class="desc services-item-content-title__desc">
+                                    Với khả năng sử dụng các công cụ hàng đầu như Figma, Photoshop và Illustrator, 
+                                    chúng tôi đặc biệt tập trung vào thiết kế giao diện người dùng (UI) và trải nghiệm người dùng (UX). 
+                                    Chúng tôi sẵn sàng tạo ra các giao diện đẹp mắt, tương tác mượt mà 
+                                    và tối ưu hóa trải nghiệm người dùng để mang đến sự hài lòng và thành công cho dự án của bạn.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="row">
+                    <div class="services__item col l-6">
+                        <div class="services__itemWrap">
+                            <div class="services-item__content">
+                                <div class="services-item-content__title">
+                                    <div class="services-item-content-title__icon">
+                                        <i class='bx bx-camera'></i>
+                                    </div>
+                                    <span class="ml-32 services-item-content-title__heading heading">VIDEO & PHOTO EDITING</span>
+                                </div>
+                                <div class="desc services-item-content-title__desc">
+                                    Với khả năng sử dụng Camera & các công cụ chuyên nghiệp như Adobe Premiere, Photoshop và Lightroom, 
+                                    chúng tôi chuyên về chỉnh sửa video và chỉnh sửa ảnh. Chúng tôi tạo ra các video đẹp mắt, 
+                                    chất lượng cao và ảnh độc đáo, thể hiện sự sáng tạo và cảm xúc. 
+                                    Hãy để chúng tôi biến những hình ảnh và video của bạn trở thành tác phẩm nghệ thuật đẹp nhất.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="services__item services__item--2n col l-6">
+                        <div class="services__itemWrap">
+                            <div class="services-item__content">
+                                <div class="services-item-content__title">
+                                    <div class="services-item-content-title__icon">
+                                        <i class='bx bx-paint'></i>
+                                    </div>
+                                    <span class="ml-32 services-item-content-title__heading heading">GRAPHIC 2D DESIGN</span>
+                                </div>
+                                <div class="desc services-item-content-title__desc">
+                                    Với khả năng sử dụng các công cụ như Photoshop và Illustrator, 
+                                    chúng tôi đặc biệt chuyên về thiết kế đồ họa 2D. 
+                                    Chúng tôi tạo ra những thiết kế độc đáo và sáng tạo, bao gồm logo, banner, hình ảnh sản phẩm và nhiều hơn nữa. 
+                                    Hãy để chúng tôi biến ý tưởng của bạn thành hình ảnh ấn tượng và gợi cảm xúc.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+            </div>
+        </div>
+
+        <div id="experience">
+            <h2 class="heading">EXPERIENCE</h2>
+            <div class="row">
+                <div class="experience__item col l-3 m-4 c-6">
+                    <div class="experience-item__img">
+                        <img src="./assets/img/html.png" title="HTML">
+                    </div>
+                    <div class="experience-item__desc">HTML</div>
+                </div>
+
+                <div class="experience__item col l-3 m-4 c-6">
+                    <div class="experience-item__img">
+                        <img src="./assets/img/css.png" title="CSS">
+                    </div>
+                    <div class="experience-item__desc">CSS</div>
+                </div>
+
+                <div class="experience__item col l-3 m-4 c-6">
+                    <div class="experience-item__img">
+                        <img src="./assets/img/js.png" title="Java Script">
+                    </div>
+                    <div class="experience-item__desc">Java Script</div>
+                </div>
+
+                <div class="experience__item col l-3 m-4 c-6">
+                    <div class="experience-item__img black-white">
+                        <img src="./assets/img/react.png" title="React JS">
+                    </div>
+                    <div class="experience-item__desc">React JS</div>
+                </div>
+
+                <div class="experience__item col l-3 m-4 c-6">
+                    <div class="experience-item__img black-white">
+                        <img src="./assets/img/nodejs.png" title="Node JS">
+                    </div>
+                    <div class="experience-item__desc">Node JS</div>
+                </div>
+
+                <div class="experience__item col l-3 m-4 c-6">
+                    <div class="experience-item__img black-white">
+                        <img src="./assets/img/WordPress.png" title="WordPress">
+                    </div>
+                    <div class="experience-item__desc">WordPress</div>
+                </div>
+
+                <div class="experience__item col l-3 m-4 c-6">
+                    <div class="experience-item__img">
+                        <img src="./assets/img/Figma.png" title="Figma">
+                    </div>
+                    <div class="experience-item__desc">Figma</div>
+                </div>
+
+                <div class="experience__item col l-3 m-4 c-6">
+                    <div class="experience-item__img">
+                        <img src="./assets/img/photoshop.png" title="Photoshop">
+                    </div>
+                    <div class="experience-item__desc">Photoshop</div>
+                </div>
+
+                <div class="experience__item col l-3 m-4 c-6">
+                    <div class="experience-item__img">
+                        <img src="./assets/img/Illustrator.png" title="Illustrator">
+                    </div>
+                    <div class="experience-item__desc">Illustrator</div>
+                </div>
+
+                <div class="experience__item col l-3 m-4 c-6">
+                    <div class="experience-item__img">
+                        <img src="./assets/img/Premiere.png" title="Premiere">
+                    </div>
+                    <div class="experience-item__desc">Premiere</div>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div id="contact" class="wide grid">
+            <h2 class="heading contact__heading">CONTACT</h2>
+            <div class="contactWrap">
+                <div class="contact__content">
+                    <h2 class="heading contact-content__heading">Drop Me a Message</h2>
+                    <p class="desc contact-content__desc">Nếu bạn có nhu cầu tuyển dụng hoặc hợp tác, 
+                        tôi luôn sẵn lòng lắng nghe và hỗ trợ. <br>
+                        Hãy liên hệ với tôi qua Zalo, 
+                        Email, Form message hoặc các kênh social media. <br>
+                        Tôi mong được hợp tác và xây dựng mối quan hệ tốt đẹp với bạn.</p>
+                    <ul class="contact-content__list">
+                        <li class="contact-content-list__item">
+                            <span class="contact-content-list-item__icon">
+                                <i class='bx bx-phone' ></i>
+                            </span>
+                            <a href="tel:+84344731649" class="contact-content-list-item__text" target="_blank">+84 344 731 649</a>
+                        </li>
+                        <li class="contact-content-list__item">
+                            <span class="contact-content-list-item__icon">
+                                <i class='bx bx-envelope' ></i>
+                            </span>
+                            <a href="mailto:kimthien128@gmail.com" class="contact-content-list-item__text" target="_blank">kimthien128@gmail.com</a>
+                        </li>
+                        <li class="contact-content-list__item">
+                            <span class="contact-content-list-item__icon">
+                                <i class='bx bx-map-pin' ></i>
+                            </span>
+                            <span class="contact-content-list-item__text">Thủ Đức, TP.HCM</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <form class="contact__form">
+                    <div class="input__box">
+                        <input type="text" id="yourName" class="input-box__input" required="">
+                        <label for="yourName" class="input-box__label">Your Name</label>
+                    </div>
+
+                    <div class="input__box">
+                        <input type="email" id="yourEmail" class="input-box__input" required="">
+                        <label for="yourEmail" class="input-box__label">Your Email</label>
+                    </div>
+
+                    <div class="input__box">
+                        <textarea id="yourMessage" class="input-box__input textarea" cols="50" rows="4" required=""></textarea>
+                        <label for="yourMessage" class="input-box__label">Your Message</label>
+                    </div>
+
+                    <button class="btn-send">Send</button>
+                </form>
+            </div>
+        </div>
+        <div class="bottom grid wide">
+            <img src="./assets/img/logo-removebg.png" title="logo" class="bottom__logo">
+            <span class="bottom__copyright">2023 - KT Studio, All rights reserved</span>
+            <ul class="bottom__social">
+                <li class="bottom-social__item" title="Facebook">
+                    <a href="https://facebook.com/kimthien128" target="_blank">
+                        <i class='bx bxl-facebook' ></i>
+                    </a>
+                </li>
+                <li class="bottom-social__item" title="YouTube">
+                    <a href="https://youtube.com/kimthien128" target="_blank">
+                        <i class='bx bxl-youtube'></i>
+                    </a>
+                </li>
+                <li class="bottom-social__item" title="Tiktok">
+                    <a href="https://www.tiktok.com/@ktstudio.vn" target="_blank">
+                        <i class='bx bxl-tiktok'></i>
+                    </a>
+                </li>
+                <li class="bottom-social__item" title="GitHub">
+                    <a href="https://github.com/kimthien128" target="_blank">
+                        <img src="./assets/icon/github-mark-white.svg">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <button onclick="topFunction()" id="scrollToTop" title="Go to top">
+        <i class='bx bxs-up-arrow-alt' ></i>
+    </button>
+    <script src="./assets/script.js"></script>
+</body>
+</html>

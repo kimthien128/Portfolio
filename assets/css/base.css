@@ -1,0 +1,244 @@
+:root {
+    --gradient-invert-color: linear-gradient(0deg,rgb(83,170,223), rgb(37, 47,191));
+    --gradient-color: linear-gradient(180deg, rgb(83,170,223), rgb(37, 47,191));
+    --gradient-90deg-color: linear-gradient(90deg, rgb(83,170,223), rgb(37, 47,191));
+    --gradient-135deg-color: linear-gradient(135deg, rgb(83,170,223), rgb(37, 47,191));
+    --gradient-315deg-color: linear-gradient(315deg, rgb(83,170,223), rgb(37, 47, 191));
+    --gradient2: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+    --primary-color: rgb(79,183,220);
+    --bg-color: #101630;
+    --text-color: #999;
+    --border-radius: 1.4rem;
+    --box-shadow-item: -.1rem -.1rem 2rem rgba(0, 0, 0, .2);
+
+    /* Color */
+    --gray1: rgba(0, 0, 0, .1);
+    --gray2: rgba(0, 0, 0, .2);
+    --gray3: rgba(0, 0, 0, .3);
+    --gray4: rgba(0, 0, 0, .4);
+    --gray5: rgba(0, 0, 0, .5);
+    --gray6: rgba(0, 0, 0, .6);
+    --gray7: rgba(0, 0, 0, .7);
+    --gray8: rgba(0, 0, 0, .8);
+    --gray9: rgba(0, 0, 0, .9);
+    --box-shadow: 0 .4rem .6rem var(--gray2);
+
+    --header-height: 8rem;
+}
+
+* {
+    box-sizing: inherit;
+}
+html {
+    /* 1rem = 10px */
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+}
+h1, h2, h3, h4, ul, p, button {
+    padding: 0;
+    margin: 0;
+}
+.heading {
+    color: white;
+    font-size: 4rem;
+    line-height: 5rem;
+    font-weight: 600;
+    text-align: center;
+}
+.desc {
+    text-align: justify;
+    font-size: 2.2rem;
+    line-height: 3rem;
+    color: var(--text-color);
+    font-weight: 400;
+    margin-top: 3rem;
+}
+/* Margin */
+.mt-4 {
+    margin-top: .4rem !important;
+}
+.mt-8 {
+    margin-top: .8rem !important;
+}
+.mt-12 {
+    margin-top: 1.2rem !important;
+}
+.mt-16 {
+    margin-top: 1.6rem !important;
+}
+.mt-20 {
+    margin-top: 2rem !important;
+}
+.mt-24 {
+    margin-top: 2.4rem !important;
+}
+.mt-32 {
+    margin-top: 3.2rem !important;
+}
+.mb-4 {
+    margin-bottom: .4rem !important;
+}
+.mb-8 {
+    margin-bottom: .8rem !important;
+}
+.mb-12 {
+    margin-bottom: 1.2rem !important;
+}
+.mb-16 {
+    margin-bottom: 1.6rem !important;
+}
+.mb-20 {
+    margin-bottom: 2rem !important;
+}
+.mb-24 {
+    margin-bottom: 2.4rem !important;
+}
+.mb-32 {
+    margin-bottom: 3.2rem !important;
+}
+.ml-4 {
+    margin-left: .4rem !important;
+}
+.ml-8 {
+    margin-left: .8rem !important;
+}
+.ml-12 {
+    margin-left: 1.2rem !important;
+}
+.ml-16 {
+    margin-left: 1.6rem !important;
+}
+.ml-20 {
+    margin-left: 2rem !important;
+}
+.ml-24 {
+    margin-left: 2.4rem !important;
+}
+.ml-32 {
+    margin-left: 3.2rem !important;
+}
+.mr-4 {
+    margin-right: .4rem !important;
+}
+.mr-8 {
+    margin-right: .8rem !important;
+}
+.mr-12 {
+    margin-right: 1.2rem !important;
+}
+.mr-16 {
+    margin-right: 1.6rem !important;
+}
+.mr-20 {
+    margin-right: 2rem !important;
+}
+.mr-24 {
+    margin-right: 2.4rem !important;
+}
+.mr-32 {
+    margin-right: 3.2rem !important;
+}
+
+/* Padding */
+.pl-32 {
+    padding-left: 3.2rem !important;
+}
+.pr-32 {
+    padding-right: 3.2rem !important;
+}
+/* !No Use */
+.no-hover {
+    cursor: default;
+}
+.no-select {
+    user-select: none;
+    -webkit-user-select: none;
+}
+.black-white {
+    filter: grayscale(100%);
+    opacity: .2;
+}
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomGrowth {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: 1;
+    }
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0);
+    } to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Button */
+.btn {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    background-image: var(--gradient-color);
+    border-radius: var(--border-radius);
+    padding: .3rem;
+    /* padding ở đây xem như là độ dày của border sau khi hover */
+}
+.btn__text {
+    color: white;
+    font-size: 2rem;
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    background-image: var(--gradient-color);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 100%;
+    padding: 2.4rem 0;
+}
+.btn:hover .btn__text {
+    background-image: var(--gradient-invert-color);
+}
+#scrollToTop {
+    display: none;
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background: rgba(79,183,220, 0.2);
+    box-shadow: var(--box-shadow);
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 1rem; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 3rem; /* Increase font size */
+}
+#scrollToTop a {
+    color: white; /* Text color */
+    text-decoration: none;
+}
+#scrollToTop:hover {
+    background-color: var(--primary-color); /* Add a dark-grey background on hover */
+}
