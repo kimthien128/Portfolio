@@ -3,12 +3,6 @@
     :root {
         --header-height: 7rem;
     }
-    .intro,
-    #portfolio,
-    #services,
-    #experience {
-        margin-top: 10rem;
-    }
     .header {
         margin-top: 5rem;
     }
@@ -16,6 +10,12 @@
         font-size: 1.6rem;
         width: 12rem;
     }
+    .header.sticky {
+        padding: 0 calc((100vw - 96rem)/2);
+    }
+    .sticky + .intro {
+        padding-top: 12rem;
+     }
     .intro h1 {
         --height: 9rem;
     }
@@ -40,17 +40,29 @@
         width: 36rem;
         left: -6%;
     }
+    #project1, 
+    #project2, 
+    #project3, 
+    #project4{
+        margin-top: 5rem;
+    }
     .about-content__heading {
         margin-top: 4rem;
     }
+    .portfolio__img {
+        height: 37rem;
+    }
+    .portfolio__img.col {
+        display: flex;
+    }
     .portfolio-img__border {
-        height: 71%;
-        width: 87%;
-        margin: auto auto auto 0;
+        height: 83%;
+        width: 95%;
+        margin: auto auto 0 0;
     }
     .portfolio__img img {
         right: 0;
-        top: 2rem;
+        top: 0;
         width: 44rem;
     }
     .services__item {
@@ -95,10 +107,11 @@
         line-height: 2rem;
         margin-top: 2rem;
     }
+    #about,
     #portfolio,
     #services,
     #experience {
-        margin-top: 10rem;
+        margin-top: 5rem;
     }
     .header {
         margin-top: 3rem;
@@ -107,6 +120,12 @@
         font-size: 1.4rem;
         width: 9rem;
     }
+    .header.sticky {
+        padding: 0 calc((100vw - 72rem)/2);
+    }
+    .sticky + .intro {
+        padding-top: 8.2rem;
+     }
     .intro {
         margin-top: 5rem;
     }
@@ -144,50 +163,49 @@
     .about__btn {
         width: 16rem;
     }
-    .portfolio__project {
-        margin-top: 3rem;
+    .portfolio-title__item {
+        --height: 2rem;
     }
     .portfolio-project-item__link {
         --height: 1.8rem;
     }
-    #mobileApp, 
-    #website, 
-    #desktop, 
-    #otherProjects {
-        margin-top: 5rem;
-    }
-    .portfolio-content__title {
-        --height: 3rem;
-        margin-bottom: 2rem;
+    #project1, 
+    #project2, 
+    #project3, 
+    #project4{
+        margin-top: 2rem;
     }
     .portfolio__img {
-        height: 37rem;;
+        height: 30rem;;
     }
     .portfolio-img__border {
-        height: 71%;
-        width: 87%;
-        margin: auto auto auto 0;
+        height: 80%;
+        width: 94%;
+        margin: auto auto 0 0;
         border-width: 1.5rem;
     }
     .portfolio__img img {
         right: 0;
         top: 2rem;
-        width: 34rem;
+        width: 33rem;
     }
     .services__item {
         margin-top: 4rem;
         padding-right: 2rem;
     }
     .services__item--2n {
-        padding-left: 2rem;
+        padding-left: 1.2rem;
+    }
+    .services-item__content {
+        width: 98%;
     }
     .services__itemWrap {
-        height: 35rem;
+        height: 25rem;
         box-shadow: -0.5rem -0.5rem 2rem rgba(83,170,223, .5), 
         0.5rem 0.5rem 2rem rgba(72,37,191, .5);
     }
     .services-item-content__title {
-        padding: 1rem 1rem 0;
+        text-align: center;
     }
     .services-item-content-title__heading {
         font-size: 2rem;
@@ -294,6 +312,7 @@
         position: absolute;
         top: 0;
         right: 0;
+        z-index: 100;
         color: white;
         font-size: 5rem;
         line-height: var(--header-height);
@@ -312,6 +331,9 @@
         align-items: center;
         margin-top: 10rem;
     }
+    .sticky + .intro {
+        padding-top: .1rem;
+     }
     .intro h1 {
         --height: 4rem;
     }
@@ -359,11 +381,14 @@
         border-bottom: .2rem solid var(--primary-color);
         margin: auto;
     }
-    .portfolio__content {
-        order: 1;
+    .portfolio-title__item {
+        border-bottom: none;
     }
-    .portfolio-content__title {
-        --height: 2rem ;
+    .portfolio-title__line {
+        display: none;
+    }
+    .portfolio-content__heading {
+        text-align: center;
     }
     .portfolio-content__readmore {
         font-size: 1.6rem;
@@ -371,7 +396,6 @@
     }
     .portfolio__img {
         height: inherit;
-        order: 2;
     }
     .portfolio-img__border {
         display: none;
@@ -383,6 +407,7 @@
         margin: 2rem auto;
         width: 80%;
     }
+
     .services__item {
         padding: 0 3rem;
     }

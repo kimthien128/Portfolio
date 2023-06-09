@@ -7,9 +7,14 @@ body {
 #portfolio,
 #services,
 #experience {
-    margin-top: 15rem;
+    margin-top: 10rem;
 }
-
+#about,
+#portfolio,
+#services,
+#experience {
+    padding-top: 10rem;
+}
 
 
 /* HEADER */
@@ -20,7 +25,7 @@ body {
     height: var(--header-height);
     align-items: center;
 }
-.sticky {
+.header.sticky {
     position: fixed;
     top: 0;
     left: 0;
@@ -29,7 +34,7 @@ body {
     background-color: var(--bg-color);
     box-shadow: 0 .5rem .5rem 0 rgba(130, 130, 130, 0.1);
     margin-top: 0;
-    padding: 0 calc((100vw - 121.7rem)/2);
+    padding: 0 calc((100vw - 120rem)/2);
 }
 .header__logo {
     height: 100%;
