@@ -1,11 +1,21 @@
-// js not working on mobile view ???
-let scrollButton = document.getElementById("scrollToTop");
-
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {
-    scrollFunction()
-};
+    scrollFunction();
+    fixHeader();
+}
 
+let header = document.getElementById('header');
+var sticky = header.offsetTop;
+
+function fixHeader(){
+    if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+    } else {
+        header.classList.remove("sticky");
+    }
+}
+
+let scrollButton = document.getElementById("scrollToTop");
 function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         scrollButton.style.display = "block";
@@ -22,7 +32,6 @@ function topFunction() {
 }
 
 //------Open Close Menu
-let header = document.getElementById('header');
 let menuBtn = document.getElementById('menuIcon');
 let headerHeight = header.clientHeight;
 

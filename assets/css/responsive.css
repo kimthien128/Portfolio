@@ -9,7 +9,7 @@
     #experience {
         margin-top: 10rem;
     }
-    #header {
+    .header {
         margin-top: 5rem;
     }
     .header-nav-list-link__text {
@@ -100,7 +100,7 @@
     #experience {
         margin-top: 10rem;
     }
-    #header {
+    .header {
         margin-top: 3rem;
     }
     .header-nav-list-link__text {
@@ -252,7 +252,7 @@
     :root {
         --header-height: 6.4rem;
     }
-    #header {
+    .header {
         display: block;
         height: var(--header-height);
         background: var(--gradient-135deg-color);
