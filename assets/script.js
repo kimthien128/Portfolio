@@ -4,7 +4,7 @@ window.onscroll = function() {
     fixHeader();
 }
 
-let header = document.getElementById('header');
+var header = document.getElementById('header');
 var sticky = header.offsetTop;
 
 function fixHeader(){
@@ -15,7 +15,7 @@ function fixHeader(){
     }
 }
 
-let scrollButton = document.getElementById("scrollToTop");
+var scrollButton = document.getElementById("scrollToTop");
 function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         scrollButton.style.display = "block";
@@ -32,20 +32,28 @@ function topFunction() {
 }
 
 //------Open Close Menu
-let menuBtn = document.getElementById('menuIcon');
-let headerHeight = header.clientHeight;
+var menuBtn = document.getElementById('menuIcon');
+var menuItems = document.querySelectorAll(`#header ul li a`);
+var headerHeight = header.clientHeight;
 
-menuBtn.onclick = function(){   
+menuBtn.onclick = function(e){   
+    console.log(e.target)
     let isClose = header.clientHeight === headerHeight;
     if (isClose){
         header.style.height = 'auto';
     } else {
         header.style.height = null;
     }
+    e.stopPropagation();
+}
+// -----Close Menu when click outside header -----
+window.onclick = function (e){
+    if(e.target != header || e.target != menuItems){
+        header.style.height = null;
+    }
 }
 
-//------Close Menu when click item
-let menuItems = document.querySelectorAll(`#header ul li a`);
+//------Close Menu when click inside item -----
 for (let i = 0; i < menuItems.length; i++){
     let menuItem = menuItems[i];
     menuItem.onclick = function(){
@@ -58,7 +66,7 @@ const portfolioTitles = document.querySelectorAll('.portfolio-title__item');
 const portfolioContents = document.querySelectorAll('.portfolioWrap');
 
 const portfolioTitleActive = document.querySelector('.portfolio-title__item--active');
-let portfolioTitleLine = document.querySelector('.portfolio-title__line');
+var portfolioTitleLine = document.querySelector('.portfolio-title__line');
 portfolioTitleLine.style.left = portfolioTitleActive.offsetLeft + 'px';
 portfolioTitleLine.style.width = portfolioTitleActive.offsetWidth + 'px';
 

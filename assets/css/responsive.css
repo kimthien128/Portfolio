@@ -271,7 +271,7 @@
         --header-height: 6.4rem;
     }
     .header {
-        display: block;
+        display: flex;
         height: var(--header-height);
         background: var(--gradient-135deg-color);
         position: fixed;
@@ -281,6 +281,11 @@
         right: 0;
         margin-top: unset;
         overflow: hidden;
+        align-items: unset;
+        justify-content: unset;
+    }
+    .header.sticky {
+        padding: unset;
     }
     .header__logo {
         height: var(--header-height);
@@ -288,13 +293,18 @@
     }
     .header-logo__img {
         filter: brightness(0) invert(1);
-        padding-left: 2rem;
-        height: calc(var(--header-height) *0.8);
+        padding: .5rem 2rem;
         margin: auto 0;
-
+        width: 10rem;
+        height: auto;
     }
     .header__nav {
         display: block;
+        width: 100%;
+        margin-top: var(--header-height);
+        margin-left: -10rem;
+        margin-right: -9rem;
+        z-index: 1;
     }
     .header-nav-list__link {
         width: 100%;
@@ -309,14 +319,6 @@
     }
     .header__menuIcon {
         display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-        z-index: 100;
-        color: white;
-        font-size: 5rem;
-        line-height: var(--header-height);
-        padding: 0 2rem;
     }
     #about,
     #portfolio,
