@@ -1,13 +1,16 @@
+const $ = document.querySelector.bind(document);
+const $$ = document.querySelectorAll.bind(document);
+const header = $('header');
+
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {
     scrollFunction();
     fixHeader();
 }
 
-var header = document.getElementById('header');
-var sticky = header.offsetTop;
-
 function fixHeader(){
+    let sticky = header.offsetTop;
+
     if (window.pageYOffset > sticky) {
         header.classList.add("sticky");
     } else {
@@ -15,8 +18,8 @@ function fixHeader(){
     }
 }
 
-var scrollButton = document.getElementById("scrollToTop");
 function scrollFunction() {
+    let scrollButton = $("#scrollToTop");
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         scrollButton.style.display = "block";
     } else {
@@ -24,59 +27,54 @@ function scrollFunction() {
     }
 }
 
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-    
+if (window.innerWidth < 739){ //khi kich thuoc man hinh o dang Mobile moi chay
+    openCloseMenu();
 }
-
 //------Open Close Menu
-var menuBtn = document.getElementById('menuIcon');
-var menuItems = document.querySelectorAll(`#header ul li a`);
-var headerHeight = header.clientHeight;
-
-menuBtn.onclick = function(e){   
-    console.log(e.target)
-    let isClose = header.clientHeight === headerHeight;
-    if (isClose){
-        header.style.height = 'auto';
-    } else {
-        header.style.height = null;
+function openCloseMenu(){
+    let headerHeight = header.clientHeight;
+    let menuBtn = $('#menuIcon');
+    let menuItems = $$(`#header ul li`);
+    // Open Menu when click btn
+    menuBtn.onclick = function(e){   
+        let isClose = header.clientHeight === headerHeight;
+        if (isClose){
+            header.style.height = 'auto';
+        } else {
+            header.style.height = null;
+        }
+        e.stopPropagation();
     }
-    e.stopPropagation();
-}
-// -----Close Menu when click outside header -----
-window.onclick = function (e){
-    if(e.target != header || e.target != menuItems){
-        header.style.height = null;
+    // -----Close Menu when click outside header -----
+    window.onclick = function (e){
+        if(e.target != menuItems){
+            header.style.height = null;
+        }
+    }
+
+    //------Close Menu when click inside item -----
+    for (let i = 0; i < menuItems.length; i++){
+        let menuItem = menuItems[i];
+        menuItem.onclick = function(){
+            header.style.height = null;
+        }
     }
 }
-
-//------Close Menu when click inside item -----
-for (let i = 0; i < menuItems.length; i++){
-    let menuItem = menuItems[i];
-    menuItem.onclick = function(){
-        header.style.height = null;
-    }
-}
-
 // PORTFOLIO
-const portfolioTitles = document.querySelectorAll('.portfolio-title__item');
-const portfolioContents = document.querySelectorAll('.portfolioWrap');
-
-const portfolioTitleActive = document.querySelector('.portfolio-title__item--active');
-var portfolioTitleLine = document.querySelector('.portfolio-title__line');
+const portfolioTitles = $$('.portfolio-title__item');
+const portfolioContents = $$('.portfolioWrap');
+const portfolioTitleActive = $('.portfolio-title__item--active');
+const portfolioTitleLine = $('.portfolio-title__line');
 portfolioTitleLine.style.left = portfolioTitleActive.offsetLeft + 'px';
 portfolioTitleLine.style.width = portfolioTitleActive.offsetWidth + 'px';
 
 portfolioTitles.forEach(function (title, index) {
     let portfolioContent = portfolioContents[index];
     title.onclick = function () {
-        document.querySelector('.portfolioWrap.portfolioWrap--active').classList.remove('portfolioWrap--active');
+        $('.portfolioWrap.portfolioWrap--active').classList.remove('portfolioWrap--active');
         portfolioContent.classList.add('portfolioWrap--active');
 
-        document.querySelector('.portfolio-title__item.portfolio-title__item--active').classList.remove('portfolio-title__item--active');
+        $('.portfolio-title__item.portfolio-title__item--active').classList.remove('portfolio-title__item--active');
         this.classList.add('portfolio-title__item--active');
 
         portfolioTitleLine.style.left = this.offsetLeft + 'px';
