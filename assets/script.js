@@ -27,8 +27,11 @@ function scrollFunction() {
     }
 }
 
-if (window.innerWidth < 739){ //khi kich thuoc man hinh o dang Mobile moi chay
+
+window.onresize = function (){
     openCloseMenu();
+    header.style.height = null;
+
 }
 //------Open Close Menu
 function openCloseMenu(){
