@@ -159,50 +159,11 @@ body {
 }
 
 /* PORTFOLIO */
-.portfolio__title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    margin-top: 4rem;
-    position: relative;
-}
-.portfolio-title__item {
-    --height: 2.6rem;
-    text-decoration: none;
-    display: block;
-    padding: 2rem 0;
-    font-size: var(--height);
-    line-height: var(--height);
-    font-weight: 600;
-    color: white;
-    text-align: center;
-    cursor: pointer;
-    transition: all ease .2s;
-    border-bottom: .5rem solid transparent;
-    border-top-right-radius: 1rem;
-    border-top-left-radius: 1rem;
-    opacity: .5;
-}
-.portfolio-title__item.portfolio-title__item--active {
-    opacity: 1;
-    color: var(--primary-color);
-}
-.portfolio-title__item:hover {
-    opacity: 1;
-    border-color: var(--primary-color);
-    color: var(--primary-color);
-    /* box-shadow: 0 0 1rem 0 rgba(3, 233, 244, 0.5); */
-}
-.portfolio-title__line {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: .5rem;
-    border-radius: 1.5rem;
-    background-color: var(--primary-color);
-    transition: all 0.2s ease;
+.project__item {
+    background-color: white;
+    height: 40rem;
+    border-radius: 2rem;
+    margin-top: 2rem;
 }
 
 
