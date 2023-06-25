@@ -41,7 +41,7 @@ html {
 body {
     margin: 0;
 }
-h1, h2, h3, h4, ul, p, button {
+h1, h2, h3, h4, h5, h6, ul, p, button {
     padding: 0;
     margin: 0;
 }
@@ -66,28 +66,22 @@ h4 {
     font-size: 3rem;
     text-transform: uppercase;
 }
-h5 {
+h5, h6, p {
     /* h5: text bold */
-    font-size: 2rem;
-}
-h6 {
     /* h6: text regular */
-    font-size: 1.4rem;
+    /* p: paragraph */
+    --size: 2rem;
+    font-size: var(--size);
+    line-height: calc(var(--size)*1.5);
+}
+h5 {
+    font-weight: 500;
 }
 p {
-    font-size: 1.4rem;
     color: var(--text-color);
-}
-.heading {
-    
-}
-.desc {
     text-align: justify;
-    font-size: 2.2rem;
-    line-height: 3rem;
-    color: var(--text-color);
-    margin-top: 3rem;
 }
+
 /* Margin */
 .mt-4 {
     margin-top: .4rem !important;
@@ -110,27 +104,7 @@ p {
 .mt-32 {
     margin-top: 3.2rem !important;
 }
-.mb-4 {
-    margin-bottom: .4rem !important;
-}
-.mb-8 {
-    margin-bottom: .8rem !important;
-}
-.mb-12 {
-    margin-bottom: 1.2rem !important;
-}
-.mb-16 {
-    margin-bottom: 1.6rem !important;
-}
-.mb-20 {
-    margin-bottom: 2rem !important;
-}
-.mb-24 {
-    margin-bottom: 2.4rem !important;
-}
-.mb-32 {
-    margin-bottom: 3.2rem !important;
-}
+
 .ml-4 {
     margin-left: .4rem !important;
 }
@@ -152,27 +126,6 @@ p {
 .ml-32 {
     margin-left: 3.2rem !important;
 }
-.mr-4 {
-    margin-right: .4rem !important;
-}
-.mr-8 {
-    margin-right: .8rem !important;
-}
-.mr-12 {
-    margin-right: 1.2rem !important;
-}
-.mr-16 {
-    margin-right: 1.6rem !important;
-}
-.mr-20 {
-    margin-right: 2rem !important;
-}
-.mr-24 {
-    margin-right: 2.4rem !important;
-}
-.mr-32 {
-    margin-right: 3.2rem !important;
-}
 
 /* Padding */
 .pl-32 {
@@ -181,6 +134,7 @@ p {
 .pr-32 {
     padding-right: 3.2rem !important;
 }
+
 /* !No Use */
 .no-hover {
     cursor: default;
@@ -248,6 +202,8 @@ p {
 .btn:hover .btn__text {
     background-image: var(--gradient-invert-color);
 }
+
+
 #scrollToTop {
     display: none;
     position: fixed; /* Fixed/sticky position */

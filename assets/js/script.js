@@ -2,6 +2,13 @@ const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 const header = $('header');
 
+// chuyển đổi 2 tab projects UIUX và Code
+var switchProjectBtn = $('input[name="switch-project"]');
+swithProject();
+switchProjectBtn.onclick = function(){
+    swithProject();
+}
+
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {
     scrollFunction();
@@ -64,10 +71,10 @@ function openCloseMenu(){
     }
 }
 // project
-const projectTitles = $$('.project-title__item');
-const projectContents = $$('.projectWrap');
-const projectTitleActive = $('.project-title__item--active');
-const projectTitleLine = $('.project-title__line');
+var projectTitles = $$('.project-title__item');
+var projectContents = $$('.projectWrap');
+var projectTitleActive = $('.project-title__item--active');
+var projectTitleLine = $('.project-title__line');
 projectTitleLine.style.left = projectTitleActive.offsetLeft + 'px';
 projectTitleLine.style.width = projectTitleActive.offsetWidth + 'px';
 
@@ -84,3 +91,15 @@ projectTitles.forEach(function (title, index) {
         projectTitleLine.style.width = this.offsetWidth + 'px';
     };
 });
+
+function swithProject (){
+    let uiuxProject = $('.project-uiux');
+    let codeProject = $('.project-code');
+    if(switchProjectBtn.checked){
+        uiuxProject.style.display = 'none';
+        codeProject.style.display = 'flex';
+    } else {
+        uiuxProject.style.display = 'flex';
+        codeProject.style.display = 'none';
+    }
+}
