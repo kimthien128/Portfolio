@@ -13,16 +13,16 @@
     .header.sticky {
         padding: 0 calc((100vw - 96rem)/2);
     }
-    .sticky + .intro {
+    .sticky + .hero {
         padding-top: 12rem;
      }
-    .intro h1 {
+    .hero h1 {
         --height: 9rem;
     }
-    .intro h2 {
+    .hero h2 {
         --height: 3rem;
     }
-    .intro__btn {
+    .hero__btn {
         margin-top: 3rem;
         width: 35rem;
     }
@@ -49,18 +49,18 @@
     .about-content__heading {
         margin-top: 4rem;
     }
-    .portfolio__img {
+    .project__img {
         height: 37rem;
     }
-    .portfolio__img.col {
+    .project__img.col {
         display: flex;
     }
-    .portfolio-img__border {
+    .project-img__border {
         height: 83%;
         width: 95%;
         margin: auto auto 0 0;
     }
-    .portfolio__img img {
+    .project__img img {
         right: 0;
         top: 0;
         width: 44rem;
@@ -108,7 +108,7 @@
         margin-top: 2rem;
     }
     #about,
-    #portfolio,
+    #project,
     #services,
     #experience {
         margin-top: 5rem;
@@ -123,19 +123,19 @@
     .header.sticky {
         padding: 0 calc((100vw - 72rem)/2);
     }
-    .sticky + .intro {
+    .sticky + .hero {
         padding-top: 8.2rem;
      }
-    .intro {
+    .hero {
         margin-top: 5rem;
     }
-    .intro h1 {
+    .hero h1 {
         --height: 6rem;
     }
-    .intro h2 {
+    .hero h2 {
         --height: 2rem;
     }
-    .intro__btn {
+    .hero__btn {
         width: 25em;
         margin-top: 1rem;
     }
@@ -163,10 +163,10 @@
     .about__btn {
         width: 16rem;
     }
-    .portfolio-title__item {
+    .project-title__item {
         --height: 2rem;
     }
-    .portfolio-project-item__link {
+    .project-project-item__link {
         --height: 1.8rem;
     }
     #project1, 
@@ -175,16 +175,16 @@
     #project4{
         margin-top: 2rem;
     }
-    .portfolio__img {
+    .project__img {
         height: 30rem;;
     }
-    .portfolio-img__border {
+    .project-img__border {
         height: 80%;
         width: 94%;
         margin: auto auto 0 0;
         border-width: 1.5rem;
     }
-    .portfolio__img img {
+    .project__img img {
         right: 0;
         top: 2rem;
         width: 33rem;
@@ -321,28 +321,28 @@
         display: block;
     }
     #about,
-    #portfolio,
+    #project,
     #services,
     #experience,
     .footer {
         margin-top: 6rem;
     }
-    .intro {
+    .hero {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-top: 10rem;
     }
-    .sticky + .intro {
+    .sticky + .hero {
         padding-top: .1rem;
      }
-    .intro h1 {
+    .hero h1 {
         --height: 4rem;
     }
-    .intro h2 {
+    .hero h2 {
         --height: 3rem;
     }
-    .intro__btn {
+    .hero__btn {
         width: 24rem;
         margin-top: 2rem;
     }
@@ -374,35 +374,35 @@
     .about__btn {
         width: 47%;
     }
-    .portfolio-project-item__link {
+    .project-project-item__link {
         --height: 1.6rem;
     }
-    .portfolioWrap {
+    .projectWrap {
         position: relative;
         width: 90%;
         border-bottom: .2rem solid var(--primary-color);
         margin: auto;
     }
-    .portfolio-title__item {
+    .project-title__item {
         border-bottom: none;
     }
-    .portfolio-title__line {
+    .project-title__line {
         display: none;
     }
-    .portfolio-content__heading {
+    .project-content__heading {
         text-align: center;
     }
-    .portfolio-content__readmore {
+    .project-content__readmore {
         font-size: 1.6rem;
         margin-top: 2rem;
     }
-    .portfolio__img {
+    .project__img {
         height: inherit;
     }
-    .portfolio-img__border {
+    .project-img__border {
         display: none;
     }
-    .portfolio__img img {
+    .project__img img {
         position: relative;
         top: unset;
         right: unset;

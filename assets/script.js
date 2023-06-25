@@ -63,24 +63,24 @@ function openCloseMenu(){
         }
     }
 }
-// PORTFOLIO
-const portfolioTitles = $$('.portfolio-title__item');
-const portfolioContents = $$('.portfolioWrap');
-const portfolioTitleActive = $('.portfolio-title__item--active');
-const portfolioTitleLine = $('.portfolio-title__line');
-portfolioTitleLine.style.left = portfolioTitleActive.offsetLeft + 'px';
-portfolioTitleLine.style.width = portfolioTitleActive.offsetWidth + 'px';
+// project
+const projectTitles = $$('.project-title__item');
+const projectContents = $$('.projectWrap');
+const projectTitleActive = $('.project-title__item--active');
+const projectTitleLine = $('.project-title__line');
+projectTitleLine.style.left = projectTitleActive.offsetLeft + 'px';
+projectTitleLine.style.width = projectTitleActive.offsetWidth + 'px';
 
-portfolioTitles.forEach(function (title, index) {
-    let portfolioContent = portfolioContents[index];
+projectTitles.forEach(function (title, index) {
+    let projectContent = projectContents[index];
     title.onclick = function () {
-        $('.portfolioWrap.portfolioWrap--active').classList.remove('portfolioWrap--active');
-        portfolioContent.classList.add('portfolioWrap--active');
+        $('.projectWrap.projectWrap--active').classList.remove('projectWrap--active');
+        projectContent.classList.add('projectWrap--active');
 
-        $('.portfolio-title__item.portfolio-title__item--active').classList.remove('portfolio-title__item--active');
-        this.classList.add('portfolio-title__item--active');
+        $('.project-title__item.project-title__item--active').classList.remove('project-title__item--active');
+        this.classList.add('project-title__item--active');
 
-        portfolioTitleLine.style.left = this.offsetLeft + 'px';
-        portfolioTitleLine.style.width = this.offsetWidth + 'px';
+        projectTitleLine.style.left = this.offsetLeft + 'px';
+        projectTitleLine.style.width = this.offsetWidth + 'px';
     };
 });

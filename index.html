@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="./assets/img/logo.jpeg">
-    <title>Kim Thiện - Portfolio</title>
+    <title>Kim Thiện - project</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,42 +30,42 @@
             <ul class="header__nav">
                 <li class="header-nav__list">
                     <a href="#" class="header-nav-list__link">
-                        <span class="header-nav-list-link__text">HOME</span>
+                        <h4 class="header-nav-list-link__text">HOME</h4>
                     </a>
                 </li>
                 <li class="header-nav__list">
                     <a href="#about" class="header-nav-list__link">
-                        <span class="header-nav-list-link__text">ABOUT ME</span>
+                        <h4 class="header-nav-list-link__text">ABOUT ME</h4>
                     </a>
                 </li>
                 <li class="header-nav__list">
-                    <a href="#portfolio" class="header-nav-list__link">
-                        <span class="header-nav-list-link__text">PORTFOLIO</span>
+                    <a href="#project" class="header-nav-list__link">
+                        <h4 class="header-nav-list-link__text">project</h4>
                     </a>
                 </li>
                 <li class="header-nav__list">
                     <a href="#services" class="header-nav-list__link">
-                        <span class="header-nav-list-link__text">SERVICES</span>
+                        <h4 class="header-nav-list-link__text">SERVICES</h4>
                     </a>
                 </li>
                 <li class="header-nav__list">
                     <a href="#experience" class="header-nav-list__link">
-                        <span class="header-nav-list-link__text">EXPERIENCE</span>
+                        <h4 class="header-nav-list-link__text">EXPERIENCE</h4>
                     </a>
                 </li>
                 <li class="header-nav__list">
                     <a href="#contact" class="header-nav-list__link">
-                        <span class="header-nav-list-link__text">CONTACT</span>
+                        <h4 class="header-nav-list-link__text">CONTACT</h4>
                     </a>
                 </li>
             </ul>
             <i id="menuIcon" class='header__menuIcon bx bx-menu'></i>
         </header>
-        <div class="intro">
+        <div class="hero">
             <h2 class="no-select">My journey</h2>
             <h1 class="no-select">from DESIGNER <br>
             to FRONT-END <br>
-            & FULL STACK<span class="intro__dot">.</span> </h1>
+            & FULL STACK<span class="hero__dot">.</span> </h1>
         </div>
 
         <div id="about" class="row">
@@ -76,7 +76,7 @@
                 </div>
             </div>
             <div class="about__content col l-7 m-6 c-12">
-                <h2 class="heading about-content__heading">ABOUT ME</h2>
+                <h3 class="heading about-content__heading">ABOUT ME</h3>
                 <p class="desc">
                     Trước đây tôi là một designer và đang trên hành trình chuyển đổi sự nghiệp 
                     thành một front-end developer và sau đó là web developer (Fullstack). 
@@ -97,12 +97,20 @@
             </div>
         </div>
 
-        <div id="portfolio">
-            <h2 class="heading">PORTFOLIO</h2>
+        <div id="project">
+            <h3 class="heading">project</h3>
 
-            <div class="row project">
+            <div class="row project-uiux">
                 <div class="project__item col l-6 m-6 c-12">
-
+                    <div class="project-item__img">
+                        <img src="./assets/img/cover-food-app.png" title="Food App">
+                    </div>
+                    <h5 class="project-item__title">Ứng dụng đặt đô ăn online</h5>
+                    <div class="project-overlay"></div>
+                    <div class="btn-project-block">
+                        <a href="#" class="btn-project" target="_blank">View Source</a>
+                        <a href="#" class="btn-project btn-project--viewdemo" target="_blank">Preview Demo</a>
+                    </div>
                 </div>
                 <div class="project__item col l-6 m-6 c-12">
 
@@ -112,89 +120,89 @@
                 </div>
             </div>
 
-            <div id="project1" class="row portfolioWrap portfolioWrap--active">
-                <div class="portfolio__content col l-6 m-6 c-12">
-                    <h2 class="heading portfolio-content__heading">Music Player App Design</h2>
-                    <ul class="portfolio-content__desc desc">
+            <div id="project1" class="row projectWrap projectWrap--active">
+                <div class="project__content col l-6 m-6 c-12">
+                    <h3 class="heading project-content__heading">Music Player App Design</h3>
+                    <ul class="project-content__desc desc">
                         <li>Vị trí: UI Design</li>
                         <li>Phần mềm: Figma</li>
                         <li>Mục đích: Cung cấp giao diện trực quan, kiểm thử các tính năng trước đi chuyển sang Front-End</li>
                         <li>Tính năng được sử dụng: Component, Autolayout, Design System, Propotype, ...</li>
                     </ul>
-                    <div class="portfolio-content__readmore">
+                    <div class="project-content__readmore">
                         <i class='bx bxs-chevrons-right' ></i>
                         <a href="https://www.figma.com/file/M5xRUj3l8OZ8TC1jFF8GL9/Music-App?type=design&node-id=0%3A1&t=F1Vxo0GbkzhNUx5U-1" 
-                        class="portfolio-content-readmore__link ml-16" target="_blank">Link Figma</a>
+                        class="project-content-readmore__link ml-16" target="_blank">Link Figma</a>
                     </div>
                 </div>
-                <div class="portfolio__img col l-6 m-6 c-12">
-                    <div class="portfolio-img__border"></div>
+                <div class="project__img col l-6 m-6 c-12">
+                    <div class="project-img__border"></div>
                     <img src="./assets/img/thumbnail-musicapp.jpg" title="Music Player App Design">
                 </div>
             </div>
 
-            <div id="project2" class="row portfolioWrap">
-                <div class="portfolio__content col l-6 m-6 c-12">
-                    <h2 class="portfolio-content__heading heading">Landing Page Design</h2>
-                    <ul class="portfolio-content__desc desc">
+            <div id="project2" class="row projectWrap">
+                <div class="project__content col l-6 m-6 c-12">
+                    <h2 class="project-content__heading heading">Landing Page Design</h2>
+                    <ul class="project-content__desc desc">
                         <li>Vị trí: Design</li>
                         <li>Phần mềm: Figma</li>
                         <li>Mục đích: Tạo template để đưa vào kho thư việc giao diện landing page lĩnh vực BĐS</li>
                         <li>Tính năng được sử dụng: Component, Autolayout, Design System, Propotype, Slide, Light/ Dark mode...</li>
                     </ul>
-                    <div class="portfolio-content__readmore">
+                    <div class="project-content__readmore">
                         <i class='bx bxs-chevrons-right' ></i>
                         <a href="https://www.figma.com/proto/TAcEWAQVSvSnHRsQHeOLRP/Landing-Page-(Growth-Building)?page-id=0%3A1&type=design&node-id=1-2&viewport=682%2C476%2C0.5&scaling=scale-down&starting-point-node-id=1%3A2" 
-                        class="portfolio-content-readmore__link ml-16" target="_blank"> Link Figma</a>
+                        class="project-content-readmore__link ml-16" target="_blank"> Link Figma</a>
                     </div>
                 </div>
-                <div class="portfolio__img col l-6 m-6 c-12">
-                    <div class="portfolio-img__border"></div>
+                <div class="project__img col l-6 m-6 c-12">
+                    <div class="project-img__border"></div>
                     <img src="./assets/img/Thumbnail-forweb.jpg" title="Landing Page Design">
                 </div>
             </div>
 
-            <div id="project3" class="row portfolioWrap">
-                <div class="portfolio__content col l-6 m-6 c-12">
-                    <h2 class="heading portfolio-content__heading">Shop Website</h2>
-                    <ul class="portfolio-content__desc desc">
+            <div id="project3" class="row projectWrap">
+                <div class="project__content col l-6 m-6 c-12">
+                    <h3 class="heading project-content__heading">Shop Website</h3>
+                    <ul class="project-content__desc desc">
                         <li>Vị trí: Front-End</li>
                         <li>Mục đích: Clone web bán hàng tương tự shopee</li>
                         <li>Công nghệ sử dụng: HTML/CSS, JS</li>
                     </ul>
-                    <div class="portfolio-content__readmore">
+                    <div class="project-content__readmore">
                         <i class='bx bxs-chevrons-right' ></i>
-                        <a href="https://kimthien128.github.io/KTshop" class="portfolio-content-readmore__link ml-16" target="_blank"> Link Github</a>
+                        <a href="https://kimthien128.github.io/KTshop" class="project-content-readmore__link ml-16" target="_blank"> Link Github</a>
                     </div>
                 </div>
-                <div class="portfolio__img col l-6 m-6 c-12">
-                    <div class="portfolio-img__border"></div>
+                <div class="project__img col l-6 m-6 c-12">
+                    <div class="project-img__border"></div>
                     <img src="./assets/img/mockup-shop.png" title="Shop Website">
                 </div>
             </div>
 
-            <div id="project4" class="row portfolioWrap">
-                <div class="portfolio__content col l-6 m-6 c-12">
-                    <h2 class="heading portfolio-content__heading">Website newnet.vn</h2>
-                    <ul class="portfolio-content__desc desc">
+            <div id="project4" class="row projectWrap">
+                <div class="project__content col l-6 m-6 c-12">
+                    <h3 class="heading project-content__heading">Website newnet.vn</h3>
+                    <ul class="project-content__desc desc">
                         <li>Vị trí: UI/UX Design & Front-End</li>
                         <li>Mục đích: Hỗ trợ NewNet.vn thay đổi toàn bộ giao diện hệ thống</li>
                         <li>Công nghệ sử dụng: Figma, HTML/CSS, JS</li>
                     </ul>
-                    <div class="portfolio-content__readmore">
+                    <div class="project-content__readmore">
                         <i class='bx bxs-chevrons-right' ></i>
-                        <a href="" target="_blank" class="portfolio-content-readmore__link ml-16"> Link Github</a>
+                        <a href="" target="_blank" class="project-content-readmore__link ml-16"> Link Github</a>
                     </div>
                 </div>
-                <div class="portfolio__img col l-6 m-6 c-12">
-                    <div class="portfolio-img__border"></div>
+                <div class="project__img col l-6 m-6 c-12">
+                    <div class="project-img__border"></div>
                     <img src="./assets/img/coming soon.jpg" title="...">
                 </div>
             </div>
         </div>
 
         <div id="services">
-            <h2 class="heading">SERVICES</h2>
+            <h3 class="heading">SERVICES</h3>
             <div class="servicesWrap">
                 <div class="row">
                     <div class="services__item col l-6">
@@ -283,7 +291,7 @@
         </div>
 
         <div id="experience">
-            <h2 class="heading">EXPERIENCE</h2>
+            <h3 class="heading">EXPERIENCE</h3>
             <div class="row">
                 <div class="experience__item col l-2 m-4 c-6">
                     <div class="experience-item__img">
@@ -362,10 +370,10 @@
     
     <footer class="footer">
         <div id="contact" class="wide grid">
-            <h2 class="heading contact__heading">CONTACT</h2>
+            <h3 class="heading contact__heading">CONTACT</h3>
             <div class="contactWrap">
                 <div class="contact__content">
-                    <h2 class="heading contact-content__heading">Drop Me a Message</h2>
+                    <h3 class="heading contact-content__heading">Drop Me a Message</h3>
                     <p class="desc contact-content__desc">Nếu bạn có nhu cầu tuyển dụng hoặc hợp tác, 
                         tôi luôn sẵn lòng lắng nghe và hỗ trợ. <br>
                         Hãy liên hệ với tôi qua Zalo, 

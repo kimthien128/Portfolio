@@ -34,6 +34,7 @@ html {
     font-size: 62.5%;
     line-height: 1.6rem;
     font-family: 'Inter', sans-serif;
+    color: white;
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
@@ -44,19 +45,47 @@ h1, h2, h3, h4, ul, p, button {
     padding: 0;
     margin: 0;
 }
-.heading {
-    color: white;
+h1 {
+    /* h1: heading SEO */
+    font-size: 12rem;
+}
+h2 {
+    /* h2: sub heading */
+    font-size: 5rem;
+}
+h3 {
+    /* h3: session title */
     font-size: 4rem;
+    text-transform: uppercase;
     line-height: 5rem;
     font-weight: 600;
     text-align: center;
+}
+h4 {
+    /* h4: header bar */
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+h5 {
+    /* h5: text bold */
+    font-size: 2rem;
+}
+h6 {
+    /* h6: text regular */
+    font-size: 1.4rem;
+}
+p {
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+.heading {
+    
 }
 .desc {
     text-align: justify;
     font-size: 2.2rem;
     line-height: 3rem;
     color: var(--text-color);
-    font-weight: 400;
     margin-top: 3rem;
 }
 /* Margin */
