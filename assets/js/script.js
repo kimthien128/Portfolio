@@ -1,18 +1,30 @@
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 const header = $('header');
+const switchProjectBtn = $('input[name="switch-project"]');
+const scrollToTopBtn = $('#scrollToTop');
+
+window.addEventListener("DOMContentLoaded", (event) => {
+    switchProject();
+});
 
 // chuyển đổi 2 tab projects UIUX và Code
-var switchProjectBtn = $('input[name="switch-project"]');
-swithProject();
 switchProjectBtn.onclick = function(){
-    swithProject();
+    switchProject();
 }
-
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {
     scrollFunction();
     fixHeader();
+}
+// Khi kích thước màn hình thay đổi thì chạy hàm này để set lại giá trị chiều cao header
+window.onresize = function (){
+    openCloseMenu();
+    header.style.height = null;
+}
+// nhấn nút scroll to top
+scrollToTopBtn.onclick = function (){
+    topFunction();
 }
 
 function fixHeader(){
@@ -34,13 +46,12 @@ function scrollFunction() {
     }
 }
 
-
-window.onresize = function (){
-    openCloseMenu();
-    header.style.height = null;
-
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
-//------Open Close Menu
+
 function openCloseMenu(){
     let headerHeight = header.clientHeight;
     let menuBtn = $('#menuIcon');
@@ -70,29 +81,8 @@ function openCloseMenu(){
         }
     }
 }
-// project
-var projectTitles = $$('.project-title__item');
-var projectContents = $$('.projectWrap');
-var projectTitleActive = $('.project-title__item--active');
-var projectTitleLine = $('.project-title__line');
-projectTitleLine.style.left = projectTitleActive.offsetLeft + 'px';
-projectTitleLine.style.width = projectTitleActive.offsetWidth + 'px';
 
-projectTitles.forEach(function (title, index) {
-    let projectContent = projectContents[index];
-    title.onclick = function () {
-        $('.projectWrap.projectWrap--active').classList.remove('projectWrap--active');
-        projectContent.classList.add('projectWrap--active');
-
-        $('.project-title__item.project-title__item--active').classList.remove('project-title__item--active');
-        this.classList.add('project-title__item--active');
-
-        projectTitleLine.style.left = this.offsetLeft + 'px';
-        projectTitleLine.style.width = this.offsetWidth + 'px';
-    };
-});
-
-function swithProject (){
+function switchProject (){
     let uiuxProject = $('.project-uiux');
     let codeProject = $('.project-code');
     if(switchProjectBtn.checked){
