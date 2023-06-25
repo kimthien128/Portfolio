@@ -13,15 +13,6 @@
     --box-shadow-item: -.1rem -.1rem 2rem rgba(0, 0, 0, .2);
 
     /* Color */
-    --gray1: rgba(0, 0, 0, .1);
-    --gray2: rgba(0, 0, 0, .2);
-    --gray3: rgba(0, 0, 0, .3);
-    --gray4: rgba(0, 0, 0, .4);
-    --gray5: rgba(0, 0, 0, .5);
-    --gray6: rgba(0, 0, 0, .6);
-    --gray7: rgba(0, 0, 0, .7);
-    --gray8: rgba(0, 0, 0, .8);
-    --gray9: rgba(0, 0, 0, .9);
     --box-shadow: 0 .4rem .6rem var(--gray2);
 
     --header-height: 8rem;
@@ -48,17 +39,22 @@ h1, h2, h3, h4, h5, h6, ul, p, button {
 }
 h1 {
     /* h1: heading SEO */
-    font-size: 12rem;
+    --size: 12rem;
+    font-size: var(--size);
+    line-height: var(--size);
 }
 h2 {
     /* h2: sub heading */
-    font-size: 5rem;
+    --size: 5rem;
+    font-size: var(--size);
+    line-height: calc(var(--size) * 1.5);
 }
 h3 {
     /* h3: session title */
-    font-size: 4rem;
+    --size: 4rem;
+    font-size: var(--size);
+    line-height: calc(var(--size) * 1.5);
     text-transform: uppercase;
-    line-height: 5rem;
     font-weight: 600;
     text-align: center;
 }
@@ -66,7 +62,7 @@ h4 {
     /* h4: title item*/
     --size: 3rem;
     font-size: var(--size);
-    line-height: calc(var(--size)*1.5);
+    line-height: calc(var(--size) * 1.5);
     text-transform: uppercase;
     font-weight: 500;
 }
@@ -76,7 +72,7 @@ h5, h6, p {
     /* p: paragraph */
     --size: 2rem;
     font-size: var(--size);
-    line-height: calc(var(--size)*1.5);
+    line-height: calc(var(--size) * 1.5);
 }
 h5 {
     font-weight: 500;

@@ -3,6 +3,9 @@ const $$ = document.querySelectorAll.bind(document);
 const header = $('header');
 const switchProjectBtn = $('input[name="switch-project"]');
 const scrollToTopBtn = $('#scrollToTop');
+const menuBtn = $('#menuIcon');
+const sendBtn = $('.btn-send');
+
 
 window.addEventListener("DOMContentLoaded", (event) => {
     switchProject();
@@ -12,19 +15,40 @@ window.addEventListener("DOMContentLoaded", (event) => {
 switchProjectBtn.onclick = function(){
     switchProject();
 }
+menuBtn.onclick = function(e){
+    openCloseMenu();
+    e.stopPropagation();
+}
+sendBtn.onclick = function(){
+    alert('Xin lỗi! Chức năng này đang trong quá trình hoàn thiện');
+}
+// -----Close Menu when click outside header -----
+window.onclick = function (e){
+    if(e.target != menuBtn){
+        header.classList.remove('OpenMenu');
+    }
+}
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {
     scrollFunction();
     fixHeader();
 }
-// Khi kích thước màn hình thay đổi thì chạy hàm này để set lại giá trị chiều cao header
-window.onresize = function (){
-    openCloseMenu();
-    header.style.height = null;
-}
 // nhấn nút scroll to top
 scrollToTopBtn.onclick = function (){
     topFunction();
+}
+
+function getParent(curElement, selector){
+    while(curElement.parentElement){
+        if(curElement.parentElement.matches(selector)){
+            return curElement.parentElement;
+        }
+        curElement = curElement.parentElement;
+    }
+}
+function openCloseMenu(){
+    let header = getParent(menuBtn, '#header');
+    header.classList.toggle('OpenMenu');
 }
 
 function fixHeader(){
@@ -50,36 +74,6 @@ function scrollFunction() {
 function topFunction() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-}
-
-function openCloseMenu(){
-    let headerHeight = header.clientHeight;
-    let menuBtn = $('#menuIcon');
-    let menuItems = $$(`#header ul li`);
-    // Open Menu when click btn
-    menuBtn.onclick = function(e){   
-        let isClose = header.clientHeight === headerHeight;
-        if (isClose){
-            header.style.height = 'auto';
-        } else {
-            header.style.height = null;
-        }
-        e.stopPropagation();
-    }
-    // -----Close Menu when click outside header -----
-    window.onclick = function (e){
-        if(e.target != menuItems){
-            header.style.height = null;
-        }
-    }
-
-    //------Close Menu when click inside item -----
-    for (let i = 0; i < menuItems.length; i++){
-        let menuItem = menuItems[i];
-        menuItem.onclick = function(){
-            header.style.height = null;
-        }
-    }
 }
 
 function switchProject (){

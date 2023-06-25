@@ -37,6 +37,7 @@ body {
     padding: 0 calc((100vw - 120rem)/2);
 }
 .header__logo {
+    display: block;
     height: 100%;
 }
 .header-logo__img {
@@ -75,6 +76,9 @@ body {
     margin-right: 0;
     margin-left: auto;
 }
+#header.OpenMenu {
+    height: auto;
+}
 
 
 /* hero */
@@ -86,23 +90,10 @@ body {
    padding-top: 15rem;
 }
 .hero h2 {
-    --height : 5rem;
     color: var(--text-color);
-    font-size: var(--height);
-    line-height: var(--height);
-}
-.hero h1 {
-    --height : 12rem;
-    color: white;
-    font-size: var(--height);
-    line-height: var(--height);
 }
 .hero__dot {
     color: var(--primary-color);
-}
-.hero__btn {
-    margin-top: 4rem;
-    width: 45rem;
 }
 
 
@@ -115,7 +106,6 @@ body {
     height: 64rem;
 }
 .about-img__border {
-    /* position: relative; */
     height: 90%;
     width: 85%;
     border: 2rem solid var(--primary-color);
@@ -128,37 +118,28 @@ body {
     left: 1.2rem;
     width: 40rem;
     border-radius: var(--border-radius);
-    /* filter: brightness(10%); */
 }
-.about__content {
+#about .about__content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
 }
 .about-content__heading {
     text-align: unset;
 }
-.about-content__desc {
-    text-align: justify;
-    font-size: 2.2rem;
-    line-height: 3rem;
-    color: var(--text-color);
-    font-weight: 400;
-    margin-top: 5rem;
-}
 .about-content__btn {
     display: flex;
     justify-content: space-around;
-    margin-top: 5rem;
 }
 .about__btn {
-    width: 25rem;
+    width: 45%;
 }
 
 /* project */
 .switch-block {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 2rem;
 }
 /* The switch - the box around the slider */
@@ -200,10 +181,6 @@ body {
     background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
-}
-  
-input:checked + .slider {
-    /* background-color: #2196F3; */
 }
   
 input:checked + .slider:before {
@@ -542,11 +519,17 @@ input:checked + .slider:before {
     width: var(--size);
     height: var(--size);
 }
+.bottom-social__item a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    padding: 1.8rem;
+
+}
 .bottom-social__item img ,
 .bottom-social__item i {
     font-size: 3rem;
-    padding: 1.8rem;
     color: white;
-    text-decoration: none;
     width: -webkit-fill-available;
 }
